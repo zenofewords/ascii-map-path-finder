@@ -42,9 +42,13 @@ def validate_map(ascii_map):
     verify_char_count(ascii_map, END_SYMBOL, 1)
 
 
-def verify_char_count(ascii_map, char, count):
-    if len([True for row in ascii_map if row.count(char) == count]) != count:
-        raise ValueError('Unexpected number of "{}" found'.format(char))
+def verify_char_count(ascii_map, symbol, count):
+    occurrences = 0
+    for row in ascii_map:
+        occurrences += row.count(symbol)
+
+    if count != occurrences:
+        raise ValueError('Unexpected number of "{}" found'.format(symbol))
 
 
 def travel_map(ascii_map):
