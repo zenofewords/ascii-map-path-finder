@@ -1,12 +1,19 @@
 from constants import (
     START_SYMBOL,
     END_SYMBOL,
+    CORNER_SYMBOL,
 )
 
 
+BASIC_MAP_PATH = 'ascii_maps/basic_map.txt'
+COMPACT_MAP_PATH = 'ascii_maps/compact_map.txt'
+INVALID_MAP_PATH = 'ascii_maps/empty_mapaaa.txt'
+EMPTY_MAP_PATH = 'ascii_maps/empty_map.txt'
+VALID_CHARS = [START_SYMBOL, END_SYMBOL, CORNER_SYMBOL, '|', '-']
+
 VALID_DATA_ASCII_MAPS = [
     {
-        'file_path': 'ascii_maps/basic_map.txt',
+        'file_path': BASIC_MAP_PATH,
         'letters': 'ACB',
         'travel_path': '@---A---+|C|+---+|+-B-x'
     },
@@ -26,7 +33,7 @@ VALID_DATA_ASCII_MAPS = [
         'travel_path': '@---A---+|||C---+|+-B-x'
     },
     {
-        'file_path': 'ascii_maps/compact_map.txt',
+        'file_path': COMPACT_MAP_PATH,
         'letters': 'ABCD',
         'travel_path': '@A+++A|+-B-+C+++C-+Dx'
     },
@@ -57,11 +64,11 @@ INVALID_DATA_ASCII_MAPS = [
 
 INVALID_ASCII_MAPS = [
     {
-        'file_path': 'ascii_maps/empty_map.txt',
+        'file_path': EMPTY_MAP_PATH,
         'error': 'File is empty',
     },
     {
-        'file_path': 'ascii_maps/empty_mapaaa.txt',
+        'file_path': INVALID_MAP_PATH,
         'error': 'File does not exist',
     },
 ]

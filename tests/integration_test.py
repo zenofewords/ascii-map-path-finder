@@ -1,11 +1,11 @@
 import pytest
 
+from ascii_map_path_finder import run_path_finder
 from tests.constants import (
     VALID_DATA_ASCII_MAPS,
     INVALID_DATA_ASCII_MAPS,
     INVALID_ASCII_MAPS,
 )
-from ascii_map_path_finder import run_path_finder
 
 
 @pytest.mark.parametrize('ascii_map_data', VALID_DATA_ASCII_MAPS)
