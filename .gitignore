@@ -1,5 +1,7 @@
+__pycache__
 *.py[cod]
 *.flake8
+.pytest_cache
 
 .DS_Store
 .vscode/
